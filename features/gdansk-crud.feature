@@ -12,17 +12,22 @@ Feature: I would like to edit gdansk
     Then I should see "gdansk creation"
     When I fill in "Name" with "<gdansk>"
      And I fill in "Caption" with "<caption>"
-    And I fill in "Size" with "<size>"
-     And I press "Create"
+      And I fill in "Size" with "<size>"
+ And I press "Create"
+    Then I should see "<gdansk>"
+    And I should see "<caption>"
+    And I should see "<size>"
+
+     
     Then I should see "<gdansk>"
      And I should see "<caption>"
-    And I should see  "<size>"
+     And I should see "<size>"
 
   Examples:
-    | gdansk          | caption   | size   |
-    | poniatowskiego  | ulica p   | 124124 |
-    | grunwaldzka     | ulica g   | 213214 |
-    | helu            | ulica h   | 12344 |
+    | gdansk       | caption        | size |
+    | poniat       | gdanskap | 1234 |
+    | grund        | gdanskag | 134 |
+    | helu         | gdanskah | 123 |
 
 
 
@@ -39,19 +44,19 @@ Feature: I would like to edit gdansk
     When I follow "Edit"
      And I fill in "Name" with "<new-gdansk>"
      And I fill in "Caption" with "<new-caption>"
-    And I fill in "Size" with "<new-size>"
+     And I fill in "Size" with "<new-size>"
      And I press "Update"
      And I follow "Back to the list"
     Then I should see "<new-gdansk>"
      And I should see "<new-caption>"
-And I should see "<new-size>"
+        And I should see "<new-size>"
      And I should not see "<old-gdansk>"
 
   Examples:
-    | old-gdansk        | new-gdansk   | new-caption        | new size |
-    | poniatowskiego    | G-E-W-V-I-P  | nowy podpis p      | 343      |
-    | grunwaldzka       | R-U-R-T-U-R  | nowy podpis g      | 234      |
-    | helu              | N-E-W-V-I-W  | nowy podpis h      | 435      |
+    | old-gdansk     | new-gdansk  | new-caption   | new-size |
+    | poniat         | P-O-N-I-A-T | nowy p      | 12 |
+    | grund          | G-R-U-N-D       | nowy g    | 12332 |
+
 
   Scenario Outline: Delete records
    Given I am on homepage
@@ -68,6 +73,6 @@ And I should see "<new-size>"
 
   Examples:
     |  gdansk    |
-    |  helu      |
-    | G-E-W-V-I-P |
-    | R-U-R-T-U-R |
+    | helu   |
+    | P-O-N-I-A-T  |
+    | G-R-U-N-D   |
