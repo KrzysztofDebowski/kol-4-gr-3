@@ -75,7 +75,7 @@ class Radom
      * @param string $age
      * @return Radom
      */
-    public function setAge:Integer($age)
+    public function setAge($age)
     {
         $this->age = $age;
 
