@@ -49,7 +49,7 @@ Feature: I would like to edit jaroslaw
 
   Examples:
     | old-jaroslaw     | new-jaroslaw   | new-caption        | new-size  |
-    | Jagiellonska     | Tarnawskiego   | moja ulica         |  80       |      
+    | Kazimierzowska   | Tarnawskiego   | moja ulica         |  80       |      
 
   Scenario Outline: Delete records
    Given I am on homepage
@@ -66,6 +66,6 @@ Feature: I would like to edit jaroslaw
 
   Examples:
     |  jaroslaw      |
-    | Kazimierzowska |
     | Tarnawskiego   |
+    | Jagiellonska   |
     | Wysockiego     |
