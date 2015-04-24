@@ -8,7 +8,7 @@ Feature: I would like to edit Elblag
      And I go to "/admin/elblag/"
     Then I should not see "<elblag>"
      And I follow "Create a new entry"
-    Then I should see "France creation"
+    Then I should see "Elblag creation"
     When I fill in "Name" with "<elblag>"
      And I fill in "Caption" with "<caption>"
     And I fill in "Size" with "<size>" 
