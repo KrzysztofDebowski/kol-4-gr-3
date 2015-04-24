@@ -12,7 +12,7 @@ Feature: I would like to edit lublin
     Then I should see "Lublin creation"
     When I fill in "Name" with "<lublin>"
     And I fill in "Caption" with "<caption>"
-    And I fill in "size" with "<size>"
+    And I fill in "Size" with "<size>"
     And I press "Create"
     Then I should see "<lublin>"
     And I should see "<caption>"
