@@ -9,7 +9,7 @@ Feature: I would like to edit New York
     And I go to "/admin/newyork/"
     Then I should not see "<newyork>"
     And I follow "Create a new entry"
-    Then I should see "New York creation"
+    Then I should see "newyork creation"
     When I fill in "Name" with "<newyork>"
     And I fill in "Caption" with "<caption>"
     And I fill in "Size" with "<size>"
@@ -21,7 +21,7 @@ Feature: I would like to edit New York
   Examples:
     | newyork     | caption              | size       |
     | Bleecker    | Opis Bleecker        | 1000       |
-    | Orchard     | Opis  Orchard        | 2000       |
+    | Orchard     | Opis Orchard        | 2000       |
     | Bedford     | Opis Bedford         | 3000       |
 
 
