@@ -14,7 +14,7 @@ Feature: I would like to edit berlin
      And I fill in "Caption" with "<caption>"
      And I fill in "Size" with "<size>"
      And I press "Create"
-    Then I should see "<berlin"
+    Then I should see "<berlin>"
      And I should see "<caption>"
      And I should see "<size>"
 
@@ -51,7 +51,7 @@ Feature: I would like to edit berlin
   Examples:
     | old-berlin     | new-berlin           | new-caption    | new-size    |
     | Alexanderplatz  | Hermannplatz       | caption_one       |   33     |
-    | Kaiserdamm      | Gendarmenmarkt     | caption_two       |   35     |
+    | Kaiserdamm      | Mehringdamm    | caption_two       |   35     |
 
 
   Scenario Outline: Delete records
@@ -70,5 +70,5 @@ Feature: I would like to edit berlin
   Examples:
     |  berlin    |
     | Hermannplatz   |
-    | Gendarmenmarkt |
+    | Mehringdamm |
     
