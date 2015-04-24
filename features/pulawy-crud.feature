@@ -49,7 +49,7 @@ Feature: I would like to edit pulawy
 
   Examples:
     | old-pulawy     | new-pulawy   | new-caption        | new-size  |
-    | Hinska         | Warszawska   | opis Lakin         |  253235   |      
+    | Hinska         | Warszawska   | opis Warszawska    |  253235   |      
 
   Scenario Outline: Delete records
    Given I am on homepage
