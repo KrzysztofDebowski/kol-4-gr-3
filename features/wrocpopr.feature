@@ -6,15 +6,15 @@ Feature: I would like to edit Wroclaw
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/wroclaw/"
+    And I go to "/admin/wrocpopr/"
     Then I should not see "<wroclaw>"
     And I follow "Create a new entry"
-    Then I should see "Wroclaw creation"
+    Then I should see "wrocpopr creation"
     When I fill in "Wroclaw" with "<wroclaw>"
     And I fill in "Population" with "<population>"
     And I press "Create"
     Then I should see "<wroclaw>"
-    And I should see "<populationt>"
+    And I should see "<population>"
 
   Examples:
     |wroclaw         |population |
@@ -30,7 +30,7 @@ Feature: I would like to edit Wroclaw
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/wroclaw/"
+    And I go to "/admin/wrocpopr/"
     Then I should not see "<new-wroclaw>"
     When I follow "<old-wroclaw>"
     Then I should see "<old-wroclaw>"
@@ -45,8 +45,8 @@ Feature: I would like to edit Wroclaw
 
   Examples:
     |old-wroclaw     |new-wroclaw      |new-population|
-    |Iglasta         |Mydlana          |50       |
-    |Nasienna        |Nauczycielska    |46       |
+    |Iglasta         |Mydlana          |50            |
+    |Nasienna        |Nauczycielska    |46            |
 
 
   Scenario Outline: Delete records
@@ -55,7 +55,7 @@ Feature: I would like to edit Wroclaw
     And I fill in "Username" with "admin"
     And I fill in "Password" with "loremipsum"
     And I press "Login"
-    And I go to "/admin/wroclaw/"
+    And I go to "/admin/wrocpopr/"
     Then I should see "<wroclaw>"
     When I follow "<wroclaw>"
     Then I should see "<wroclaw>"

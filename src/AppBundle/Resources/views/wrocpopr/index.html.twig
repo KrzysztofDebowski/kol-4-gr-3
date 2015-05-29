@@ -16,7 +16,11 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('admin_wrocpopr_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.wroclaw }}</td>
+                <td>
+            <a href="{{ path('admin_wrocpopr_show', { 'id': entity.id }) }}">
+                    {{ entity.wroclaw }}
+            </a>
+                 </td>
                 <td>{{ entity.population }}</td>
                 <td>
                 <ul>
